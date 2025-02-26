@@ -7,14 +7,8 @@ public class WordCounter {
             return 0;
         }
 
-        String[] words = phrase.toLowerCase().split("\\W+");
-        HashSet<String> uniqueWords = new HashSet<>();
-
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                uniqueWords.add(word);
-            }
-        }
+        Set<String> uniqueWords = new HashSet<>(Arrays.asList(phrase.toLowerCase().split("\\W+")));
+        uniqueWords.removeIf(String::isBlank);  // Elimina cadenas vacías si las hay
 
         return uniqueWords.size();
     }
