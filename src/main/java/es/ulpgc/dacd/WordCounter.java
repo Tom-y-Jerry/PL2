@@ -1,4 +1,5 @@
 package es.ulpgc.dacd;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class WordCounter {
