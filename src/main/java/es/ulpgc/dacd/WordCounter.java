@@ -8,10 +8,8 @@ public class WordCounter {
         if (phrase == null || phrase.isBlank()) {
             return 0;
         }
-
         Set<String> uniqueWords = new HashSet<>(Arrays.asList(phrase.toLowerCase().split("\\W+")));
-        uniqueWords.removeIf(String::isBlank);  // Elimina cadenas vacías si las hay
-
+        uniqueWords.removeIf(String::isBlank);
         return uniqueWords.size();
     }
 }
