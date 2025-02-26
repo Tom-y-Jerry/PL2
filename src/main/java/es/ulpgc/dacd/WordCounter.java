@@ -3,7 +3,7 @@ import java.util.HashSet;
 
 public class WordCounter {
     public static int countUniqueWords(String phrase) {
-        if (phrase == null || phrase.isEmpty()) {
+        if (phrase == null || phrase.isBlank()) {
             return 0;
         }
 
