@@ -7,5 +7,9 @@ public class Main {
         String phrase = "Hola mundo, hola universo.";
         int uniqueWords = WordCounter.countUniqueWords(phrase);
         System.out.println("Número de palabras únicas: " + uniqueWords);
+        String[] salesData = {"apple,10", "banana,5", "apple,15",
+                "banana,20"};
+        new SalesReport().generateReport(salesData);
     }
+
 }
